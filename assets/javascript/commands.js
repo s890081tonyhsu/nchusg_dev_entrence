@@ -11,7 +11,7 @@ load : function load(url)
 
 clear : function clear()
 {
-  var CHILDREN_TO_PRESERVE = 3;
+  var CHILDREN_TO_PRESERVE = 0;
   while (_out.childNodes[CHILDREN_TO_PRESERVE])
     _out.removeChild(_out.childNodes[CHILDREN_TO_PRESERVE]);
 },
@@ -136,11 +136,20 @@ scope : function scope(sc)
   println("Scope is now " + sc + ".  If a variable is not found in this scope, window will also be searched.  New variables will still go on window.", "message");
 },
 
-mathHelp : function mathHelp()
+sgit : function sgit(str)
 {
-  printWithRunin("Math constants", "E, LN2, LN10, LOG2E, LOG10E, PI, SQRT1_2, SQRT2", "propList");
-  printWithRunin("Math methods", "abs, acos, asin, atan, atan2, ceil, cos, exp, floor, log, max, min, pow, random, round, sin, sqrt, tan", "propList");
+  str = typeof str !== 'undefined' ? str : 'greet';
+  switch(str){
+    case 'greet':
+      print('Hello, welcome to nchusgit.');
+      print('You can type some javascript here.');
+      break;
+    case 'introduce':
+      print('Here is nchusgit, a organization to make and manage sg website application.');
+      print('Our website http://nchusg.org');
+      print('You can follow us at github. http://github.com/nchusg');
+      break;
+  }
 },
 
-ans : undefined
 };
