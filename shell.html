@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html onclick="keepFocusInTextbox(event)">
+<head>
+<meta charset="UTF-8">
+<title>NCHUSGIT Shell</title>
+
+<link rel="stylesheet" href="assets/css/basic.css">
+<script type="text/javascript" src="assets/javascript/shell.js"></script>
+<script type="text/javascript" src="assets/javascript/commands.js"></script>
+
+<!-- for http://ted.mielczarek.org/code/mozilla/extensiondev/ -->
+<script type="text/javascript" src="chrome://extensiondev/content/rdfhistory.js"></script>
+<script type="text/javascript" src="chrome://extensiondev/content/chromeShellExtras.js"></script>
+</head>
+
+<body onload="init()">
+
+  <div>
+    <h1>NCHUSGIT Shell</h1>
+    <p>Forked from <a href="http://www.squarefree.com/shell/?ignoreReferrerFrom=shell1.4">Javascript Shell 1.4</a></p>
+  </div>
+  <div id="output"></div>
+  <div>
+    <textarea id="input" class="input" wrap="off" onkeydown="inputKeydown(event)" rows="1"></textarea>
+  </div>
+
+</body>
+
+</html>
